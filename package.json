@@ -1,0 +1,50 @@
+{
+  "name": "extengen",
+  "version": "0.1.0",
+  "description": "A Lightweight Shared Memory Layer for AI Coding Agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "mcp:stdio": "tsx src/mcp/stdio.ts",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/scripts/seed.ts",
+    "demo": "tsx src/scripts/demo.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memory",
+    "embeddings",
+    "pgvector",
+    "rag",
+    "claude-code",
+    "ai-agents"
+  ],
+  "author": "ExtenGen Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "@fastify/sensible": "^6.0.3",
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "bullmq": "^5.41.6",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.6.0",
+    "openai": "^4.86.1",
+    "pg": "^8.13.3",
+    "pgvector": "^0.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/pg": "^8.11.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}
